@@ -1,0 +1,14 @@
+services:
+  postgresql:
+    image: gestion-produits-postgresql
+    environment:
+      POSTGRES_USER: postgresql
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: exercice_docker
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
+
+volumes:
+  postgresql-data:
